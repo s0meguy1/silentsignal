@@ -40,15 +40,15 @@ pip install scapy
    * Open `client.py` in a text editor.
    * Set the `server_ip` variable to the IP address of your server.
    * Customize the keyword for filtering noise by modifying the `if cmd == "your_custom_keyword":` line.
-3. Start the server:
+3. Start the server: (root or sudo probably required here)
    * Run the following command on the cloud server:
      ```
      python3 server.py
      ```
 4. Start the client:
-   * Run the following command:
+   * Run the following command: (sudo/admin is more than likely required here)
      ```
-     python3 client.py
+     sudo python3 client.py
      ```
 5. Send commands from the server:
    * On the server side, you will be prompted to enter commands to send to the client.
