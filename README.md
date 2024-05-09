@@ -66,6 +66,8 @@ pip install scapy
       and
       ```if cmd == "your_custom_keyword":```
       lines to use a unique and hard-to-guess keyword for filtering noise from the internet.
+  * I'm not sure if this is required, but I had already done it because I was testing tools built by other people prior to creating my own:
+    * add `net.ipv4.icmp_echo_ignore_all=1` to `/etc/sysctl.conf` on both machines? (maybe just the cloud server?)
 ## Disclaimer
 This tool is intended for educational and legitimate purposes only. Misuse of this tool may violate laws and regulations. The authors and contributors are not responsible for any misuse or damage caused by this tool.
 ## License
