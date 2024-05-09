@@ -33,13 +33,13 @@ pip install scapy
  1. Configure the server:
    * Open `server.py` in a text editor.
    * Set the debug variable to 1 for debugging mode or 0 for normal mode.
-   * Customize the keyword for filtering noise by modifying the `if result == "your_custom_keyword":` line.
+   * Customize the keyword for filtering noise by modifying the `clientkey = "KEY OF YOUR CHOICE"` line.
 
 
 2. Configure the client:
    * Open `client.py` in a text editor.
    * Set the `server_ip` variable to the IP address of your server.
-   * Customize the keyword for filtering noise by modifying the `if cmd == "your_custom_keyword":` line.
+   * Customize the keyword for filtering noise by modifying the `specialkey = "SAME KEY AS SERVER.PY"` line.
 3. Start the server: (root or sudo probably required here)
    * Run the following command on the cloud server:
      ```
@@ -62,9 +62,9 @@ pip install scapy
     * In `client.py`, modify the `time.sleep(1)` line to set the desired interval between keep-alive pings.
   * Change the custom keyword:
     * In both `server.py` and `client.py`, modify the:
-      ```if result == "your_custom_keyword":```
+      ```clientkey```
       and
-      ```if cmd == "your_custom_keyword":```
+      ```specialkey```
       lines to use a unique and hard-to-guess keyword for filtering noise from the internet.
   * I'm not sure if this is required, but I had already done it because I was testing tools built by other people prior to creating my own:
     * add `net.ipv4.icmp_echo_ignore_all=1` to `/etc/sysctl.conf` on both machines? (maybe just the cloud server?) - then run `sysctl -p`
